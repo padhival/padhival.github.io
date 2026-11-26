@@ -1,0 +1,1117 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91网版免费_免费视频资源导航_高清影视在线观看平台</title>
+<meta name="description" content="91网版免费提供免费高清影视资源导航与在线观看入口，涵盖剧情片、纪录片、综艺、动漫等具体条目，整理最新更新动态与类型看点，适合想快速找到免费可看内容的观众。">
+<meta name="keywords" content="免费视频导航,高清影视在线观看,免费影视资源,影视类型推荐,在线观看入口">
+<style>
+:root{
+  --bg:#0e1116;
+  --panel:#161b22;
+  --panel-2:#1c232c;
+  --line:#2a323d;
+  --text:#e6edf3;
+  --muted:#9aa7b4;
+  --accent:#ff5c39;
+  --accent-2:#3aa0ff;
+  --gold:#f2c14e;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 6px 24px rgba(0,0,0,.35);
+  --head-h:64px;
+  --notice-h:38px;
+  --maxw:1320px;
+  --gap:20px;
+  font-size:16px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:calc(var(--head-h) + var(--notice-h) + 12px)}
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--text);
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:700}
+ul,ol{margin:0;padding:0;list-style:none}
+button{font-family:inherit;cursor:pointer}
+
+/* 吸顶公告条 */
+.notice{
+  position:sticky;top:0;z-index:60;
+  height:var(--notice-h);
+  background:linear-gradient(90deg,#2a1410,#3a1a10 60%,#2a1410);
+  border-bottom:1px solid #4a2418;
+  display:flex;align-items:center;
+  font-size:.82rem;color:#ffd9c9;
+  overflow:hidden;
+}
+.notice .wrap{
+  max-width:var(--maxw);margin:0 auto;padding:0 20px;
+  display:flex;align-items:center;gap:12px;width:100%;
+  white-space:nowrap;overflow:hidden;
+}
+.notice .dot{width:7px;height:7px;border-radius:50%;background:var(--accent);flex:none;box-shadow:0 0 0 3px rgba(255,92,57,.25)}
+.notice strong{color:#fff}
+.notice .marquee{overflow:hidden;flex:1;min-width:0}
+.notice .marquee span{display:inline-block;animation:slide 26s linear infinite}
+@keyframes slide{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* 页头 */
+.site-head{
+  position:sticky;top:var(--notice-h);z-index:55;
+  background:rgba(14,17,22,.94);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.site-head .wrap{
+  max-width:var(--maxw);margin:0 auto;padding:0 20px;
+  height:var(--head-h);display:flex;align-items:center;gap:24px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex:none}
+.brand svg{width:34px;height:34px;flex:none}
+.brand .name{font-size:1.18rem;font-weight:800;letter-spacing:.5px}
+.nav{display:flex;gap:6px;flex:1;flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none}
+.nav::-webkit-scrollbar{display:none}
+.nav a{
+  padding:8px 12px;border-radius:999px;font-size:.9rem;color:var(--muted);
+  white-space:nowrap;transition:.2s;border:1px solid transparent;
+}
+.nav a:hover,.nav a:focus-visible{color:var(--text);background:var(--panel-2);border-color:var(--line);outline:none}
+.head-actions{display:flex;align-items:center;gap:10px;flex:none}
+.search-mini{
+  display:flex;align-items:center;gap:6px;background:var(--panel);
+  border:1px solid var(--line);border-radius:999px;padding:6px 12px;
+}
+.search-mini input{
+  background:transparent;border:none;color:var(--text);outline:none;font-size:.86rem;width:130px;
+}
+.search-mini input::placeholder{color:#6b7885}
+.btn-ghost{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;
+  padding:8px 16px;border-radius:999px;border:1px solid var(--line);
+  background:var(--panel);color:var(--text);font-size:.88rem;font-weight:600;transition:.2s;
+}
+.btn-ghost:hover,.btn-ghost:focus-visible{border-color:var(--accent);color:var(--accent);outline:none}
+.btn-primary{
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 22px;border-radius:999px;border:none;
+  background:linear-gradient(135deg,var(--accent),#ff8a4c);color:#fff;
+  font-size:.95rem;font-weight:700;transition:.2s;box-shadow:0 6px 18px rgba(255,92,57,.28);
+}
+.btn-primary:hover,.btn-primary:focus-visible{transform:translateY(-1px);filter:brightness(1.08);outline:none}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;
+  border-bottom:1px solid var(--line);
+  background:
+    radial-gradient(900px 420px at 78% -10%,rgba(255,92,57,.20),transparent 62%),
+    radial-gradient(700px 420px at 8% 110%,rgba(58,160,255,.16),transparent 60%),
+    linear-gradient(180deg,#0e1116,#121821 70%,#0e1116);
+}
+.hero .wrap{
+  max-width:var(--maxw);margin:0 auto;padding:56px 20px 48px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;
+}
+.hero-tag{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 14px;border-radius:999px;font-size:.78rem;font-weight:600;
+  color:#ffb59e;background:rgba(255,92,57,.12);border:1px solid rgba(255,92,57,.35);
+  margin-bottom:18px;
+}
+.hero h1{font-size:clamp(2.1rem,4.4vw,3.4rem);letter-spacing:-.5px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{
+  margin:18px 0 0;color:var(--muted);font-size:1rem;max-width:36em;line-height:1.85;
+}
+.hero .cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-stats{display:flex;gap:28px;margin-top:30px;flex-wrap:wrap}
+.hero-stats .s b{display:block;font-size:1.5rem;color:#fff;font-weight:800;line-height:1.2}
+.hero-stats .s span{font-size:.78rem;color:var(--muted)}
+.hero-visual{
+  position:relative;border-radius:18px;border:1px solid var(--line);
+  background:linear-gradient(160deg,#1a2230,#12171f);
+  padding:18px;box-shadow:var(--shadow);
+}
+.hv-screen{
+  position:relative;border-radius:12px;overflow:hidden;aspect-ratio:16/10;
+  background:#0a0d12;
+}
+.hv-screen img{width:100%;height:100%;object-fit:cover;opacity:.82}
+.hv-play{
+  position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+}
+.hv-play span{
+  width:62px;height:62px;border-radius:50%;background:rgba(255,92,57,.92);
+  display:flex;align-items:center;justify-content:center;box-shadow:0 8px 30px rgba(255,92,57,.5);
+}
+.hv-play span::after{
+  content:"";width:0;height:0;border-left:20px solid #fff;
+  border-top:12px solid transparent;border-bottom:12px solid transparent;margin-left:5px;
+}
+.hv-row{display:flex;gap:10px;margin-top:14px}
+.hv-chip{
+  flex:1;padding:9px 10px;border-radius:8px;background:var(--panel-2);
+  border:1px solid var(--line);font-size:.76rem;color:var(--muted);text-align:center;
+}
+.hv-chip b{display:block;color:#fff;font-size:.86rem;margin-bottom:2px}
+
+/* 主体布局：三栏门户 */
+.layout{
+  max-width:var(--maxw);margin:0 auto;padding:34px 20px 0;
+  display:grid;grid-template-columns:184px minmax(0,1fr) 250px;gap:var(--gap);
+  align-items:start;
+}
+.side-left,.side-right{position:sticky;top:calc(var(--head-h) + var(--notice-h) + 18px);align-self:start}
+.panel{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;
+}
+.panel + .panel{margin-top:var(--gap)}
+.panel-hd{
+  padding:13px 16px;border-bottom:1px solid var(--line);
+  font-size:.82rem;font-weight:700;color:var(--muted);letter-spacing:1px;
+  display:flex;align-items:center;gap:8px;
+}
+.panel-hd::before{content:"";width:3px;height:14px;border-radius:2px;background:var(--accent)}
+.channel-list{padding:8px}
+.channel-list a{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:9px 11px;border-radius:var(--radius-sm);font-size:.9rem;color:#c4cfda;transition:.18s;
+}
+.channel-list a:hover,.channel-list a:focus-visible{background:var(--panel-2);color:#fff;outline:none}
+.channel-list a span{font-size:.7rem;color:#6b7885}
+.channel-list a:hover span{color:var(--accent)}
+
+/* 主内容 */
+.main{min-width:0}
+section.block{margin-bottom:40px;scroll-margin-top:calc(var(--head-h) + var(--notice-h) + 16px)}
+.block-hd{display:flex;align-items:flex-end;justify-content:space-between;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+.block-hd h2{font-size:1.32rem;letter-spacing:-.2px}
+.block-hd h2 small{display:block;font-size:.78rem;font-weight:400;color:var(--muted);margin-top:4px;letter-spacing:0}
+.block-hd .more{font-size:.82rem;color:var(--accent-2);white-space:nowrap}
+.block-hd .more:hover{text-decoration:underline}
+
+/* 概览 */
+.overview{
+  background:linear-gradient(150deg,#161d27,#121821);
+  border:1px solid var(--line);border-radius:var(--radius);padding:24px 26px;
+}
+.overview p{margin:0 0 12px;color:#c4cfda;font-size:.95rem}
+.overview p:last-child{margin-bottom:0}
+.overview b{color:#fff}
+
+/* 卡片网格 */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px}
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;display:flex;flex-direction:column;transition:.2s;
+}
+.card:hover{border-color:#3d4a5a;transform:translateY(-2px);box-shadow:var(--shadow)}
+.card .thumb{position:relative;aspect-ratio:4/3;overflow:hidden;background:#0a0d12}
+.card .thumb img{width:100%;height:100%;object-fit:cover;transition:.35s}
+.card:hover .thumb img{transform:scale(1.05)}
+.card .badge{
+  position:absolute;top:10px;left:10px;
+  padding:3px 9px;border-radius:6px;font-size:.7rem;font-weight:700;
+  background:rgba(255,92,57,.92);color:#fff;
+}
+.card .score{
+  position:absolute;bottom:10px;right:10px;
+  padding:2px 8px;border-radius:6px;font-size:.72rem;font-weight:700;
+  background:rgba(0,0,0,.72);color:var(--gold);
+}
+.card .body{padding:14px 15px 16px;display:flex;flex-direction:column;gap:8px;flex:1}
+.card h3{font-size:.98rem;line-height:1.45}
+.card .desc{font-size:.82rem;color:var(--muted);line-height:1.65;flex:1}
+.tags{display:flex;flex-wrap:wrap;gap:6px}
+.tag{
+  font-size:.7rem;padding:2px 8px;border-radius:5px;
+  background:var(--panel-2);border:1px solid var(--line);color:#93a1b0;
+}
+.tag.accent{color:#ffb59e;border-color:rgba(255,92,57,.35);background:rgba(255,92,57,.08)}
+.card .meta{display:flex;justify-content:space-between;font-size:.74rem;color:#6b7885;border-top:1px solid var(--line);padding-top:9px}
+
+/* 更新动态列表 */
+.updates{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.update-item{
+  display:flex;gap:12px;padding:13px 14px;background:var(--panel);
+  border:1px solid var(--line);border-radius:var(--radius-sm);transition:.18s;
+}
+.update-item:hover{border-color:#3d4a5a;background:var(--panel-2)}
+.update-item .idx{
+  flex:none;width:34px;height:34px;border-radius:8px;
+  background:rgba(58,160,255,.12);color:var(--accent-2);
+  display:flex;align-items:center;justify-content:center;font-weight:800;font-size:.82rem;
+}
+.update-item .txt{min-width:0}
+.update-item h4{font-size:.9rem;margin-bottom:3px}
+.update-item p{font-size:.78rem;color:var(--muted);margin:0;line-height:1.55}
+.update-item time{font-size:.71rem;color:#6b7885;display:block;margin-top:4px}
+
+/* 分类入口 */
+.cats{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.cat{
+  padding:16px 14px;border-radius:var(--radius);background:var(--panel);
+  border:1px solid var(--line);transition:.18s;display:flex;flex-direction:column;gap:5px;
+  text-align:left;color:inherit;width:100%;
+}
+.cat:hover,.cat:focus-visible{border-color:var(--accent);background:var(--panel-2);outline:none}
+.cat b{font-size:.95rem;color:#fff}
+.cat span{font-size:.73rem;color:var(--muted);line-height:1.5}
+.cat.active{border-color:var(--accent);background:rgba(255,92,57,.09)}
+.filter-bar{display:flex;align-items:center;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+.filter-bar .hint{font-size:.78rem;color:var(--muted)}
+.filter-note{font-size:.82rem;color:var(--accent);margin-bottom:12px;display:none}
+.filter-note.show{display:block}
+
+/* 深度解析 */
+.article{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);padding:28px 30px}
+.article h3{font-size:1.08rem;margin:26px 0 10px;padding-left:12px;border-left:3px solid var(--accent)}
+.article h3:first-child{margin-top:0}
+.article p{margin:0 0 12px;color:#c4cfda;font-size:.93rem;line-height:1.9}
+.article ul{margin:0 0 14px;padding-left:2px}
+.article li{position:relative;padding-left:18px;margin-bottom:8px;color:#c4cfda;font-size:.9rem;line-height:1.8}
+.article li::before{content:"";position:absolute;left:2px;top:.72em;width:6px;height:6px;border-radius:2px;background:var(--accent-2)}
+.article strong{color:#fff}
+
+/* 体验指南 步骤 */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+.step{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px;display:flex;gap:14px;
+}
+.step .num{
+  flex:none;width:38px;height:38px;border-radius:10px;
+  background:linear-gradient(135deg,var(--accent),#ff8a4c);color:#fff;
+  display:flex;align-items:center;justify-content:center;font-weight:800;
+}
+.step h4{font-size:.94rem;margin-bottom:5px}
+.step p{margin:0;font-size:.82rem;color:var(--muted);line-height:1.7}
+
+/* FAQ */
+.faq{display:flex;flex-direction:column;gap:10px}
+details.faq-item{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;
+}
+details.faq-item summary{
+  list-style:none;cursor:pointer;padding:15px 18px;font-size:.92rem;font-weight:600;
+  display:flex;justify-content:space-between;gap:12px;align-items:center;
+}
+details.faq-item summary::-webkit-details-marker{display:none}
+details.faq-item summary::after{
+  content:"+";font-size:1.2rem;color:var(--accent);font-weight:400;transition:.2s;flex:none;
+}
+details.faq-item[open] summary::after{content:"−"}
+details.faq-item summary:focus-visible{outline:2px solid var(--accent-2);outline-offset:-2px}
+details.faq-item p{margin:0;padding:0 18px 16px;color:var(--muted);font-size:.86rem;line-height:1.8}
+
+/* 评论 */
+.comments{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.comment{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;
+}
+.comment .who{display:flex;align-items:center;gap:9px;margin-bottom:8px}
+.comment .av{
+  width:30px;height:30px;border-radius:50%;flex:none;
+  display:flex;align-items:center;justify-content:center;font-size:.78rem;font-weight:700;color:#fff;
+}
+.comment .who b{font-size:.83rem}
+.comment .who time{font-size:.7rem;color:#6b7885;margin-left:auto}
+.comment p{margin:0;font-size:.84rem;color:#b9c5d1;line-height:1.7}
+
+/* 资讯 */
+.news{display:flex;flex-direction:column;gap:12px}
+.news-item{
+  display:grid;grid-template-columns:96px 1fr;gap:14px;padding:12px;
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--radius-sm);transition:.18s;
+}
+.news-item:hover{border-color:#3d4a5a;background:var(--panel-2)}
+.news-item .thumb{aspect-ratio:4/3;border-radius:6px;overflow:hidden}
+.news-item .thumb img{width:100%;height:100%;object-fit:cover}
+.news-item h4{font-size:.91rem;margin-bottom:4px;line-height:1.45}
+.news-item p{margin:0;font-size:.79rem;color:var(--muted);line-height:1.6}
+.news-item time{font-size:.71rem;color:#6b7885;display:block;margin-top:5px}
+
+/* 相关推荐 标签索引 */
+.reco{display:flex;flex-wrap:wrap;gap:9px}
+.reco a{
+  padding:8px 15px;border-radius:999px;background:var(--panel);border:1px solid var(--line);
+  font-size:.84rem;color:#c4cfda;transition:.18s;
+}
+.reco a:hover,.reco a:focus-visible{border-color:var(--accent-2);color:var(--accent-2);outline:none}
+
+/* 榜单 */
+.rank{display:flex;flex-direction:column;gap:2px}
+.rank-item{
+  display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:var(--radius-sm);transition:.18s;
+}
+.rank-item:hover{background:var(--panel-2)}
+.rank-item .no{
+  width:24px;flex:none;font-weight:800;font-size:.95rem;color:#5b6875;text-align:center;
+}
+.rank-item:nth-child(1) .no{color:var(--gold)}
+.rank-item:nth-child(2) .no{color:#c8d2dc}
+.rank-item:nth-child(3) .no{color:#d08a5a}
+.rank-item .info{flex:1;min-width:0}
+.rank-item .info b{display:block;font-size:.9rem;margin-bottom:2px}
+.rank-item .info span{font-size:.75rem;color:var(--muted)}
+.rank-item .heat{font-size:.76rem;color:var(--accent);font-weight:700;flex:none}
+
+/* 侧栏 */
+.rank-mini{padding:6px 8px}
+.rank-mini li{display:flex;gap:9px;padding:9px 8px;border-radius:6px;font-size:.83rem;align-items:center;transition:.15s}
+.rank-mini li:hover{background:var(--panel-2)}
+.rank-mini .n{width:17px;font-weight:800;color:#5b6875;font-size:.78rem;flex:none;text-align:center}
+.rank-mini li:nth-child(-n+3) .n{color:var(--accent)}
+.rank-mini .t{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.quick-links{display:flex;flex-wrap:wrap;gap:7px;padding:12px}
+.quick-links a{
+  font-size:.76rem;padding:4px 10px;border-radius:5px;
+  background:var(--panel-2);border:1px solid var(--line);color:#93a1b0;
+}
+.quick-links a:hover{color:var(--accent);border-color:rgba(255,92,57,.4)}
+
+/* 页尾 */
+.site-foot{
+  margin-top:40px;border-top:1px solid var(--line);background:#0a0d12;
+}
+.foot-wrap{max-width:var(--maxw);margin:0 auto;padding:44px 20px 28px}
+.foot-top{display:grid;grid-template-columns:1.4fr repeat(3,1fr);gap:32px;padding-bottom:32px;border-bottom:1px solid var(--line)}
+.foot-brand .brand{margin-bottom:12px}
+.foot-brand p{font-size:.82rem;color:var(--muted);line-height:1.8;max-width:24em;margin:0}
+.foot-col h4{font-size:.83rem;color:#fff;margin-bottom:12px;letter-spacing:.5px}
+.foot-col ul{display:flex;flex-direction:column;gap:8px}
+.foot-col a{font-size:.8rem;color:var(--muted);transition:.15s}
+.foot-col a:hover{color:var(--accent)}
+.foot-bottom{padding-top:22px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.75rem;color:#6b7885;line-height:1.8}
+.foot-bottom .disc{max-width:52em}
+
+/* 响应式 */
+@media(max-width:1180px){
+  .layout{grid-template-columns:170px minmax(0,1fr);}
+  .side-right{display:none}
+  .hero .wrap{grid-template-columns:1fr;gap:32px}
+  .hero-visual{max-width:560px}
+}
+@media(max-width:1024px){
+  .layout{grid-template-columns:1fr;}
+  .side-left{position:static;order:2}
+  .main{order:1}
+  .channel-list{display:flex;flex-wrap:wrap;gap:6px}
+  .channel-list a{flex:1 1 120px}
+  .cats{grid-template-columns:repeat(4,1fr)}
+  .foot-top{grid-template-columns:1fr 1fr}
+  .search-mini input{width:96px}
+}
+@media(max-width:740px){
+  :root{--head-h:56px}
+  .site-head .wrap{gap:12px;padding:0 14px}
+  .nav{display:none}
+  .search-mini{display:none}
+  .hero .wrap{padding:38px 14px 32px}
+  .hero-stats{gap:20px}
+  .layout{padding:22px 14px 0}
+  .updates,.steps,.comments{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr 1fr}
+  .cards{grid-template-columns:1fr 1fr;gap:12px}
+  .card .body{padding:11px 12px 13px}
+  .card h3{font-size:.88rem}
+  .card .desc{font-size:.76rem}
+  .article{padding:20px 18px}
+  .news-item{grid-template-columns:76px 1fr}
+  .foot-top{grid-template-columns:1fr;gap:24px}
+  .foot-bottom{flex-direction:column}
+  .block-hd h2{font-size:1.12rem}
+}
+@media(max-width:400px){
+  .cards{grid-template-columns:1fr}
+  .cats{grid-template-columns:1fr}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- 吸顶公告条 -->
+<div class="notice" role="region" aria-label="站内更新公告">
+  <div class="wrap">
+    <span class="dot" aria-hidden="true"></span>
+    <strong>今日更新</strong>
+    <div class="marquee">
+      <span>11 月 25 日新增 9 部高清片源 · 纪录片《深海之门》第 4 集上线 · 冬季档 12 部新剧定档排期表已发布 · 动漫专区新增 26 集 · 免费线路全部完成高清重压 · 11 月 25 日新增 9 部高清片源 · 纪录片《深海之门》第 4 集上线 · 冬季档 12 部新剧定档排期表已发布 · 动漫专区新增 26 集 · 免费线路全部完成高清重压</span>
+    </div>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-head">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="91网版免费 首页">
+      <svg viewBox="0 0 48 48" aria-hidden="true">
+        <defs>
+          <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0" stop-color="#ff5c39"/>
+            <stop offset="1" stop-color="#ff9d4c"/>
+          </linearGradient>
+        </defs>
+        <rect x="3" y="9" width="42" height="30" rx="7" fill="none" stroke="url(#lg)" stroke-width="3"/>
+        <path d="M20 18.5 L32 24 L20 29.5 Z" fill="url(#lg)"/>
+        <circle cx="38" cy="14" r="2.4" fill="#3aa0ff"/>
+      </svg>
+      <span class="name">91网版免费</span>
+    </a>
+    <nav class="nav" aria-label="主导航">
+      <a href="/#overview">平台概览</a>
+      <a href="/#picks">精选片单</a>
+      <a href="/#updates">更新动态</a>
+      <a href="/#cats">分类导航</a>
+      <a href="/#deep">深度解析</a>
+      <a href="/#guide">观看指南</a>
+      <a href="/#faq">常见问题</a>
+      <a href="/#rank">热门榜单</a>
+    </nav>
+    <div class="head-actions">
+      <div class="search-mini" role="search">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#6b7885" stroke-width="2.2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="M20 20l-3.5-3.5"/></svg>
+        <input id="searchInput" type="search" placeholder="搜索片名 / 类型" aria-label="站内搜索片名或类型">
+      </div>
+      <a class="btn-ghost" href="/#picks">开始观看</a>
+    </div>
+  </div>
+</header>
+
+<!-- 首屏 -->
+<section class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <span class="hero-tag">免费高清 · 每日更新 · 无需注册</span>
+      <h1>91网版免费</h1>
+      <p class="lead">一个整理免费高清影视资源的导航站：剧情片、纪录片、综艺、动漫、短剧五大方向持续收录，每条内容标注类型、更新进度与可看线路，帮你先判断值不值得看，再决定从哪一集开始。</p>
+      <div class="cta">
+        <a class="btn-primary" href="/#picks">查看今日精选片单</a>
+        <a class="btn-ghost" href="/#updates">看最新更新</a>
+      </div>
+      <div class="hero-stats">
+        <div class="s"><b>3,180+</b><span>在架可看条目</span></div>
+        <div class="s"><b>26</b><span>今日新增集数</span></div>
+        <div class="s"><b>5</b><span>内容主方向</span></div>
+        <div class="s"><b>08:00</b><span>每日更新节点</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hv-screen">
+        <img src="https://picsum.photos/seed/jiuyi-hero01/800/400" width="800" height="400" alt="91网版免费首页主视觉：夜间影院银幕与播放界面" loading="lazy">
+        <div class="hv-play"><span></span></div>
+      </div>
+      <div class="hv-row">
+        <div class="hv-chip"><b>剧情片</b>1,042 部</div>
+        <div class="hv-chip"><b>纪录片</b>386 部</div>
+        <div class="hv-chip"><b>动漫</b>612 部</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 主体三栏 -->
+<div class="layout">
+
+  <!-- 左栏：频道索引 -->
+  <aside class="side-left" aria-label="频道索引">
+    <div class="panel">
+      <div class="panel-hd">频道索引</div>
+      <nav class="channel-list">
+        <a href="/#cats">剧情片 <span>1042</span></a>
+        <a href="/#cats">纪录片 <span>386</span></a>
+        <a href="/#cats">综艺 <span>274</span></a>
+        <a href="/#cats">动漫 <span>612</span></a>
+        <a href="/#cats">短剧 <span>498</span></a>
+        <a href="/#cats">悬疑犯罪 <span>190</span></a>
+        <a href="/#cats">科幻奇幻 <span>216</span></a>
+        <a href="/#cats">人文历史 <span>158</span></a>
+        <a href="/#cats">自然地理 <span>112</span></a>
+        <a href="/#cats">家庭治愈 <span>144</span></a>
+        <a href="/#cats">运动竞技 <span>96</span></a>
+        <a href="/#cats">音乐舞台 <span>88</span></a>
+      </nav>
+    </div>
+    <div class="panel">
+      <div class="panel-hd">快速定位</div>
+      <div class="quick-links">
+        <a href="/#picks">高分剧情片</a>
+        <a href="/#picks">短剧完结</a>
+        <a href="/#updates">今日上线</a>
+        <a href="/#deep">类型对比</a>
+        <a href="/#guide">入门顺序</a>
+        <a href="/#rank">热度榜</a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- 中栏主内容 -->
+  <main class="main">
+
+    <!-- 1 主题领域概览 -->
+    <section class="block" id="overview">
+      <div class="block-hd">
+        <h2>免费影视内容都在看什么<small>五大方向、当前可关注的具体内容</small></h2>
+      </div>
+      <div class="overview">
+        <p>免费影视资源大致可以分为五个方向。<b>剧情片</b>以完整叙事为主，单集 40—50 分钟，适合每晚连看两到三集；<b>短剧</b>单集 3—8 分钟，节奏极快，通勤和午休就能看完一条线；<b>纪录片</b>偏知识密度，自然地理与人文历史两类最稳；<b>综艺</b>看重嘉宾组合和赛制，音乐舞台类近两年回温明显；<b>动漫</b>分季番与长篇连载两条线，季番 12 集左右，适合追更。</p>
+        <p>当前值得关注的具体内容集中在几处：纪录片《深海之门》11 月 25 日刚更新第 4 集，深海热液喷口一段是全片信息量最高的部分；悬疑剧《雾港来信》已完结 16 集，适合一次性刷完；短剧《三十七楼的灯》以 8 分钟单集体量拿到 9.1 分，是今年短剧里叙事最完整的一部；动漫《星轨之外》第二季进入第 9 集，作画质量稳定。</p>
+        <p>观看前建议先看类型标签和更新进度，再决定投入。完结条目适合连刷，连载条目适合追更，纪录片与综艺则可以先看一集试水。每部内容的评分、集数和线路状态都会在条目页面标注清楚。</p>
+      </div>
+    </section>
+
+    <!-- 2 精选内容推荐 -->
+    <section class="block" id="picks">
+      <div class="block-hd">
+        <h2>今日精选片单<small>11 月 25 日可看的具体条目</small></h2>
+        <a class="more" href="/#rank">查看热度榜 →</a>
+      </div>
+      <div class="filter-note" id="filterNote" role="status" aria-live="polite"></div>
+      <div class="cards" id="pickCards">
+
+        <article class="card" data-keywords="雾港来信 悬疑 犯罪 剧情片">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/wugang-laixin01/400/300" width="400" height="300" alt="悬疑剧《雾港来信》海报：雾中港口与灯塔" loading="lazy">
+            <span class="badge">悬疑</span>
+            <span class="score">9.3</span>
+          </div>
+          <div class="body">
+            <h3>雾港来信</h3>
+            <p class="desc">16 集完结。一桩港口旧案牵出三条时间线，第 9 集起叙事视角切换，是全剧结构最精巧的一段。适合喜欢慢热推理的观众。</p>
+            <div class="tags"><span class="tag accent">完结</span><span class="tag">犯罪</span><span class="tag">多线叙事</span></div>
+            <div class="meta"><span>全 16 集</span><span>剧情片</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="深海之门 纪录片 自然地理">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/shenhai-zhimen02/400/300" width="400" height="300" alt="纪录片《深海之门》画面：深海热液喷口" loading="lazy">
+            <span class="badge">纪录片</span>
+            <span class="score">9.5</span>
+          </div>
+          <div class="body">
+            <h3>深海之门</h3>
+            <p class="desc">第 4 集 11 月 25 日上线。摄制组下潜至 3800 米拍摄热液喷口生态，是全季画面最震撼的一集，也解释了深海生物的化能合成机制。</p>
+            <div class="tags"><span class="tag accent">更新中</span><span class="tag">自然地理</span><span class="tag">科普</span></div>
+            <div class="meta"><span>更新至 4 集</span><span>纪录片</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="三十七楼的灯 短剧 都市">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/sanshiqi-deng03/400/300" width="400" height="300" alt="短剧《三十七楼的灯》剧照：深夜写字楼窗景" loading="lazy">
+            <span class="badge">短剧</span>
+            <span class="score">9.1</span>
+          </div>
+          <div class="body">
+            <h3>三十七楼的灯</h3>
+            <p class="desc">8 分钟单集、共 24 集已完结。讲一栋写字楼里四组租户的交集，每集一个视角，靠细节推进，不靠反转堆情绪。</p>
+            <div class="tags"><span class="tag accent">完结</span><span class="tag">都市</span><span class="tag">群像</span></div>
+            <div class="meta"><span>全 24 集</span><span>短剧</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="星轨之外 动漫 科幻奇幻">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/xinggui-zhiwai04/400/300" width="400" height="300" alt="动漫《星轨之外》第二季画面：星际航行舰" loading="lazy">
+            <span class="badge">动漫</span>
+            <span class="score">8.9</span>
+          </div>
+          <div class="body">
+            <h3>星轨之外 第二季</h3>
+            <p class="desc">更新至第 9 集。本季把叙事重心从舰队战转向船员关系，第 7—9 集三连是情感线的高点，作画保持稳定。</p>
+            <div class="tags"><span class="tag accent">更新中</span><span class="tag">科幻</span><span class="tag">季番</span></div>
+            <div class="meta"><span>更新至 9 集</span><span>动漫</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="山海之间 综艺 音乐舞台">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/shanhai-zhijian05/400/300" width="400" height="300" alt="音乐综艺《山海之间》舞台灯光现场" loading="lazy">
+            <span class="badge">综艺</span>
+            <span class="score">8.6</span>
+          </div>
+          <div class="body">
+            <h3>山海之间</h3>
+            <p class="desc">音乐采风类综艺，第 8 期今晚 21:10 上线。节目组带六位音乐人进入闽南沿海村落采集声音素材，每期完成一首改编作品。</p>
+            <div class="tags"><span class="tag accent">直播</span><span class="tag">音乐</span><span class="tag">采风</span></div>
+            <div class="meta"><span>更新至 8 期</span><span>综艺</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="雪线以北 剧情片 家庭治愈">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/xuexian-yibei06/400/300" width="400" height="300" alt="剧情片《雪线以北》剧照：雪原上的木屋" loading="lazy">
+            <span class="badge">剧情</span>
+            <span class="score">8.8</span>
+          </div>
+          <div class="body">
+            <h3>雪线以北</h3>
+            <p class="desc">12 集完结。一对父女在冬季山区公路上的十日同行，对白克制，靠环境声和长镜头推进，适合安静时段观看。</p>
+            <div class="tags"><span class="tag accent">完结</span><span class="tag">家庭</span><span class="tag">治愈</span></div>
+            <div class="meta"><span>全 12 集</span><span>剧情片</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="旧城档案 纪录片 人文历史">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/jiucheng-dangan07/400/300" width="400" height="300" alt="纪录片《旧城档案》画面：老城区街巷与老照片" loading="lazy">
+            <span class="badge">纪录片</span>
+            <span class="score">9.0</span>
+          </div>
+          <div class="body">
+            <h3>旧城档案</h3>
+            <p class="desc">10 集完结。以六座老工业城市的厂区档案为线索，每集聚焦一条街道的三十年变迁，口述史部分材料扎实。</p>
+            <div class="tags"><span class="tag accent">完结</span><span class="tag">人文历史</span><span class="tag">口述史</span></div>
+            <div class="meta"><span>全 10 集</span><span>纪录片</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="第七号球场 运动竞技 剧情片">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/diqi-qiuchang08/400/300" width="400" height="300" alt="剧集《第七号球场》画面：夜间灯光下的球场" loading="lazy">
+            <span class="badge">运动</span>
+            <span class="score">8.4</span>
+          </div>
+          <div class="body">
+            <h3>第七号球场</h3>
+            <p class="desc">更新至第 6 集。城市业余联赛题材，比赛场面拍得实在，战术细节有顾问把关，喜欢竞技线的观众可以追。</p>
+            <div class="tags"><span class="tag accent">更新中</span><span class="tag">运动</span><span class="tag">群像</span></div>
+            <div class="meta"><span>更新至 6 集</span><span>剧情片</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="回声实验 科幻奇幻 悬疑">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/huisheng-shiyan09/400/300" width="400" height="300" alt="科幻剧《回声实验》画面：声波可视化实验室" loading="lazy">
+            <span class="badge">科幻</span>
+            <span class="score">8.7</span>
+          </div>
+          <div class="body">
+            <h3>回声实验</h3>
+            <p class="desc">8 集完结。声音记忆回溯设定，前两集铺垫较慢，第 3 集之后节奏明显加快，设定控可以优先。</p>
+            <div class="tags"><span class="tag accent">完结</span><span class="tag">科幻</span><span class="tag">设定向</span></div>
+            <div class="meta"><span>全 8 集</span><span>剧情片</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="灶台四季 综艺 美食">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/zaotai-siji10/400/300" width="400" height="300" alt="美食综艺《灶台四季》画面：厨房灶台与食材" loading="lazy">
+            <span class="badge">综艺</span>
+            <span class="score">8.5</span>
+          </div>
+          <div class="body">
+            <h3>灶台四季</h3>
+            <p class="desc">更新至第 11 期。按二十四节气做菜的慢综艺，每期两道时令菜，讲清楚食材来源和处理手法，适合边做家务边看。</p>
+            <div class="tags"><span class="tag accent">更新中</span><span class="tag">美食</span><span class="tag">慢综艺</span></div>
+            <div class="meta"><span>更新至 11 期</span><span>综艺</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="北纬三十度手记 纪录片 自然地理">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/beiwei30-shouji11/400/300" width="400" height="300" alt="纪录片《北纬三十度手记》画面：山地梯田" loading="lazy">
+            <span class="badge">纪录片</span>
+            <span class="score">8.9</span>
+          </div>
+          <div class="body">
+            <h3>北纬三十度手记</h3>
+            <p class="desc">6 集完结。沿北纬三十度线拍摄的六段地理人文短片，第 4 集讲山地梯田灌溉系统，信息密度最高。</p>
+            <div class="tags"><span class="tag accent">完结</span><span class="tag">自然地理</span><span class="tag">短篇</span></div>
+            <div class="meta"><span>全 6 集</span><span>纪录片</span></div>
+          </div>
+        </article>
+
+        <article class="card" data-keywords="半张地图 悬疑犯罪 短剧">
+          <div class="thumb">
+            <img src="https://picsum.photos/seed/banzhang-ditu12/400/300" width="400" height="300" alt="短剧《半张地图》画面：摊开的手绘地图与台灯" loading="lazy">
+            <span class="badge">短剧</span>
+            <span class="score">8.3</span>
+          </div>
+          <div class="body">
+            <h3>半张地图</h3>
+            <p class="desc">30 集完结，单集 6 分钟。寻人线索型短剧，每三集一个小结，适合一口气看完，结局收束干净。</p>
+            <div class="tags"><span class="tag accent">完结</span><span class="tag">悬疑</span><span class="tag">寻人</span></div>
+            <div class="meta"><span>全 30 集</span><span>短剧</span></div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- 3 最新更新动态 -->
+    <section class="block" id="updates">
+      <div class="block-hd">
+        <h2>最新更新与热播动态<small>11 月 25 日前后 30 天内的具体变动</small></h2>
+      </div>
+      <div class="updates">
+        <div class="update-item"><div class="idx">01</div><div class="txt"><h4>《深海之门》第 4 集上线</h4><p>热液喷口生态段落全季信息量最高，附带 12 分钟摄制手记。</p><time>今天 08:00</time></div></div>
+        <div class="update-item"><div class="idx">02</div><div class="txt"><h4>《雾港来信》全 16 集完结</h4><p>大结局补完第三条时间线，平台同步放出分集时间轴对照表。</p><time>昨天 21:10</time></div></div>
+        <div class="update-item"><div class="idx">03</div><div class="txt"><h4>《山海之间》第 8 期今晚直播</h4><p>闽南沿海采风专场，21:10 开播，次日 10:00 上线回看。</p><time>今天 21:10</time></div></div>
+        <div class="update-item"><div class="idx">04</div><div class="txt"><h4>《星轨之外》第二季更新至第 9 集</h4><p>船员关系线收束，第 10 集为季终，提前一周放出预告。</p><time>11 月 24 日</time></div></div>
+        <div class="update-item"><div class="idx">05</div><div class="txt"><h4>动漫专区新增 26 集</h4><p>含三部秋季季番的第 7—9 集，免费线路同步完成高清重压。</p><time>11 月 23 日</time></div></div>
+        <div class="update-item"><div class="idx">06</div><div class="txt"><h4>《旧城档案》第 10 集解封</h4><p>补充 1990 年代厂区口述材料，片尾列出全部受访者名单。</p><time>11 月 21 日</time></div></div>
+        <div class="update-item"><div class="idx">07</div><div class="txt"><h4>《第七号球场》更新至第 6 集</h4><p>本集比赛段落采用单镜头跟拍，战术板画面首次出现。</p><time>11 月 20 日</time></div></div>
+        <div class="update-item"><div class="idx">08</div><div class="txt"><h4>短剧频道新增 14 部完结条目</h4><p>单集 3—8 分钟，全部标注总集数与结局状态。</p><time>11 月 18 日</time></div></div>
+        <div class="update-item"><div class="idx">09</div><div class="txt"><h4>冬季档 12 部新剧定档排期表发布</h4><p>含 5 部悬疑、3 部家庭题材，首播日期集中在 12 月上旬。</p><time>11 月 15 日</time></div></div>
+        <div class="update-item"><div class="idx">10</div><div class="txt"><h4>《回声实验》第 3 集修正字幕</h4><p>声音频谱相关术语重新校对，共修正 17 处译名。</p><time>11 月 12 日</time></div></div>
+        <div class="update-item"><div class="idx">11</div><div class="txt"><h4>《灶台四季》第 11 期上线</h4><p>小雪节气专场，两道时令菜附完整食材处理步骤。</p><time>11 月 8 日</time></div></div>
+        <div class="update-item"><div class="idx">12</div><div class="txt"><h4>纪录片频道上线「按集数筛选」</h4><p>可按 6 集以内 / 10 集以上快速缩小范围，覆盖 386 部条目。</p><time>11 月 3 日</time></div></div>
+      </div>
+    </section>
+
+    <!-- 4 分类入口（含筛选） -->
+    <section class="block" id="cats">
+      <div class="block-hd">
+        <h2>分类导航<small>按类型筛选今日精选片单</small></h2>
+      </div>
+      <div class="filter-bar">
+        <span class="hint">点击分类可筛选上方片单，再次点击恢复全部</span>
+        <button class="btn-ghost" id="resetFilter" type="button">重置筛选</button>
+      </div>
+      <div class="cats" id="catList">
+        <button class="cat" type="button" data-cat="剧情片"><b>剧情片</b><span>完整叙事 · 单集 40 分钟</span></button>
+        <button class="cat" type="button" data-cat="纪录片"><b>纪录片</b><span>自然地理 · 人文历史</span></button>
+        <button class="cat" type="button" data-cat="综艺"><b>综艺</b><span>音乐舞台 · 美食慢综</span></button>
+        <button class="cat" type="button" data-cat="动漫"><b>动漫</b><span>季番 · 长篇连载</span></button>
+        <button class="cat" type="button" data-cat="短剧"><b>短剧</b><span>单集 3—8 分钟</span></button>
+        <button class="cat" type="button" data-cat="悬疑"><b>悬疑犯罪</b><span>推理 · 多线叙事</span></button>
+        <button class="cat" type="button" data-cat="科幻"><b>科幻奇幻</b><span>设定向 · 世界观</span></button>
+        <button class="cat" type="button" data-cat="运动"><b>运动竞技</b><span>联赛 · 训练线</span></button>
+      </div>
+    </section>
+
+    <!-- 5 深度解析 -->
+    <section class="block" id="deep">
+      <div class="block-hd">
+        <h2>深度解析：免费影视怎么挑、怎么看<small>类型差异、条目判断与观看策略</small></h2>
+      </div>
+      <div class="article">
+        <h3>剧情片与短剧：两种完全不同的时间成本</h3>
+        <p>剧情片和短剧看起来都是「讲故事」，实际消费方式差别很大。剧情片单集 40—50 分钟，一季 8—16 集，完整看完需要 6—12 小时，适合固定在晚间连看；短剧单集 3—8 分钟，一部 24—30 集，总时长往往不到 3 小时，适合通勤、午休、做家务时切段看。</p>
+        <p>判断一部剧情片值不值得投入，先看三件事：<strong>总集数</strong>（12 集以内更适合试水）、<strong>是否完结</strong>（连载条目要接受追更等待）、<strong>叙事结构</strong>（多线叙事的前两集通常信息密度低，别急着下结论）。《雾港来信》就是典型的多线叙事，前两集铺三条时间线，第 3 集才开始收拢，很多人是在第 3 集之后才被抓住的。</p>
+        <p>短剧的判断标准不同，重点看<strong>单集钩子</strong>和<strong>结局状态</strong>。8 分钟一集的结构要求每集末尾有推进，如果前三集都在重复同一个情境，基本可以放弃。《三十七楼的灯》之所以拿到 9.1 分，是因为它每集换一个视角，四组租户的故事互相咬合，而不是靠反转硬拉情绪。</p>
+
+        <h3>纪录片：先看方向，再看集数</h3>
+        <p>纪录片最容易踩的坑是「题材喜欢但节奏不适应」。自然地理类画面密度高，即使没有强叙事也能看下去；人文历史类依赖材料和讲述方式，节奏慢的条目需要更专注的观看状态。</p>
+        <ul>
+          <li><strong>自然地理</strong>：优先看拍摄地和拍摄技术。《深海之门》的价值在于 3800 米载人下潜的实拍素材，这类画面在别处很难看到。</li>
+          <li><strong>人文历史</strong>：优先看材料来源。《旧城档案》的口述史部分列出了全部受访者，可信度明显高于只靠旁白叙述的同类条目。</li>
+          <li><strong>短篇优先</strong>：6 集以内的纪录片试错成本低，《北纬三十度手记》每集 30 分钟，一晚上能看完两集。</li>
+        </ul>
+
+        <h3>动漫：季番与长篇的取舍</h3>
+        <p>季番 12 集左右，节奏紧凑，适合按季追更；长篇连载动辄上百集，前期世界观铺得慢，但人物关系更厚。第一次接触某个方向，建议从季番入手，确认自己是否吃得下这个类型的表达方式，再决定要不要进入长篇。</p>
+        <p>《星轨之外》第二季属于典型的季番结构：第 1—3 集建立新冲突，第 4—6 集展开支线，第 7—9 集收束情感线，第 10 集季终。这种节奏在季番里很标准，看到第 6 集基本能判断自己要不要继续。</p>
+
+        <h3>综艺：赛制比嘉宾更重要</h3>
+        <p>综艺的持续性取决于赛制设计。音乐舞台类如果只有演唱没有过程，《山海之间》这种采风加改编的结构反而更耐看，因为每期能看到作品从素材到成品的完整链路。美食慢综艺则看信息量，《灶台四季》每期讲清两道菜的处理手法，比单纯展示成品更有留存价值。</p>
+
+        <h3>评分、热度与线路状态怎么用</h3>
+        <p>条目页上的三个数字各有含义：<strong>评分</strong>反映看完后的整体评价，8.5 分以上通常叙事完整；<strong>热度</strong>反映当下的讨论量，新上线条目热度高但评分样本少；<strong>线路状态</strong>决定能不能顺畅看完，免费线路完成高清重压的条目优先。</p>
+        <p>三者冲突时，以评分为主、热度为辅。一部完结半年、评分 8.8 的条目，往往比刚上线三天、热度很高但评分样本不足的条目更值得投入时间。</p>
+      </div>
+    </section>
+
+    <!-- 6 体验指南 -->
+    <section class="block" id="guide">
+      <div class="block-hd">
+        <h2>观看路径：从哪一部开始比较稳<small>按时间预算和类型偏好排序</small></h2>
+      </div>
+      <div class="steps">
+        <div class="step"><div class="num">1</div><div><h4>先定时间预算</h4><p>只有碎片时间就从短剧入手，《三十七楼的灯》单集 8 分钟；有整块晚上再看剧情片，12 集完结的《雪线以北》两晚能刷完。</p></div></div>
+        <div class="step"><div class="num">2</div><div><h4>确认是否完结</h4><p>不想等更新就筛完结条目；愿意追更再看连载，《深海之门》《第七号球场》都在更新中，每周固定更新。</p></div></div>
+        <div class="step"><div class="num">3</div><div><h4>看类型标签是否对味</h4><p>喜欢推理优先《雾港来信》，喜欢设定优先《回声实验》，喜欢安静叙事优先《雪线以北》，标签比简介更能反映实际观感。</p></div></div>
+        <div class="step"><div class="num">4</div><div><h4>试看第一集再决定</h4><p>纪录片和综艺建议先看一集，《旧城档案》第 1 集就定下了全片的口述史风格，看十分钟就能判断合不合口味。</p></div></div>
+        <div class="step"><div class="num">5</div><div><h4>同类条目横向比较</h4><p>同为悬疑，《雾港来信》重结构、《半张地图》重线索推进，前者适合整块时间，后者适合碎片时间。</p></div></div>
+        <div class="step"><div class="num">6</div><div><h4>关注更新节点</h4><p>每日 08:00 是主要更新节点，综艺直播场次在晚间，追更条目可以按这个节奏安排观看时间。</p></div></div>
+      </div>
+    </section>
+
+    <!-- 7 FAQ -->
+    <section class="block" id="faq">
+      <div class="block-hd">
+        <h2>常见问题<small>关于类型、更新与选择的实际疑问</small></h2>
+      </div>
+      <div class="faq">
+        <details class="faq-item"><summary>短剧一般多久更新一次，完结要等多久？</summary><p>短剧通常按周更新，一次放出 5—8 集，一部 24—30 集的短剧大约 4—6 周完结。也有整部一次性放出的情况，完结状态会在条目页标注，追更前先确认是否已完结更省心。</p></details>
+        <details class="faq-item"><summary>剧情片和短剧到底有什么区别，只是时长不同吗？</summary><p>不只是时长。剧情片靠完整叙事和人物弧线支撑，单集信息密度低但整体厚度高；短剧要求每集末尾有推进，结构更紧凑，人物塑造相对简化。同一题材在两种体量下的观感差别很大。</p></details>
+        <details class="faq-item"><summary>第一次接触纪录片，从哪一部开始看比较好？</summary><p>建议从 6 集以内的短篇入手，《北纬三十度手记》每集 30 分钟，题材分散、试错成本低。如果对自然题材更感兴趣，《深海之门》的画面冲击力最强，但需要接受连载等待。</p></details>
+        <details class="faq-item"><summary>《雾港来信》和《半张地图》都是悬疑，怎么选？</summary><p>《雾港来信》16 集、多线叙事，适合整块时间连看，前两集需要耐心；《半张地图》30 集、单集 6 分钟，靠线索推进，适合碎片时间。前者重结构，后者重节奏。</p></details>
+        <details class="faq-item"><summary>动漫季番和长篇连载，观看顺序有讲究吗？</summary><p>没有强制顺序，但建议先看季番确认是否喜欢这个方向的表达方式。季番 12 集节奏紧凑，判断成本低；长篇前期铺垫慢，投入时间多，确认偏好之后再进入更稳妥。</p></details>
+        <details class="faq-item"><summary>条目页的评分和热度不一致时，以哪个为准？</summary><p>以评分为主。评分反映看完后的整体评价，样本相对稳定；热度反映当下讨论量，新条目热度高但评分样本少。两者差距很大时，优先选择完结时间较长、评分稳定的条目。</p></details>
+      </div>
+    </section>
+
+    <!-- 8 用户评论 -->
+    <section class="block" id="comments">
+      <div class="block-hd">
+        <h2>观众怎么说<small>围绕具体条目与类型的真实反馈</small></h2>
+      </div>
+      <div class="comments">
+        <div class="comment"><div class="who"><span class="av" style="background:#ff5c39">林</span><b>林间有雾</b><time>今天 09:12</time></div><p>《雾港来信》第 9 集的视角切换确实漂亮，前面铺的三条线一下就对上了，重看了一遍前两集才发现细节早就埋好。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#3aa0ff">陈</span><b>陈默看片</b><time>今天 08:40</time></div><p>《三十七楼的灯》是我今年看过最完整的短剧，8 分钟一集但每集都有信息推进，没有为了时长硬拖。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#f2c14e">周</span><b>周末场记</b><time>昨天 22:05</time></div><p>《深海之门》第 4 集的热液喷口画面确实震撼，不过解说词有点密，建议关掉弹幕专心看。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#7a5cff">苏</span><b>苏打气泡</b><time>昨天 20:31</time></div><p>《星轨之外》第二季作画稳，但剧情推进比第一季慢，第 7 集之后才进入状态，前面几集有点磨。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#20b27a">何</span><b>何处有山</b><time>11 月 24 日 19:48</time></div><p>《雪线以北》的对白太少了，前两集差点放弃，看到第 4 集才明白它想讲什么，属于需要耐心的类型。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#ff5c39">赵</span><b>赵四格</b><time>11 月 24 日 15:20</time></div><p>《旧城档案》的口述部分做得好，受访者名单列得清楚，比那种只有旁白的纪录片可信度高不少。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#3aa0ff">吴</span><b>吴记夜班</b><time>11 月 23 日 23:10</time></div><p>《第七号球场》的比赛段落拍得实在，战术板画面第一次出现，看得出请了顾问，不是摆拍。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#f2c14e">郑</span><b>郑小满</b><time>11 月 23 日 18:02</time></div><p>《回声实验》前两集真的慢，第 3 集之后才好看，建议直接从第 3 集试，不喜欢再回头补设定。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#7a5cff">孙</span><b>孙桥北</b><time>11 月 22 日 21:37</time></div><p>《山海之间》第 7 期的改编比原曲好，采风的素材用得很扎实，比单纯翻唱有意思多了。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#20b27a">刘</span><b>刘家灶台</b><time>11 月 22 日 12:15</time></div><p>《灶台四季》每期两道菜讲得清楚，食材处理步骤完整，边看边做确实能跟上，这点比很多美食综艺强。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#ff5c39">黄</span><b>黄河以南</b><time>11 月 21 日 20:55</time></div><p>《半张地图》结局收得干净，30 集没注水，每三集一个小结的结构很适合通勤看。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#3aa0ff">马</span><b>马路边边</b><time>11 月 20 日 17:26</time></div><p>《北纬三十度手记》第 4 集讲梯田灌溉，信息量比前几集大，短篇纪录片里算质量很稳的一部。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#f2c14e">高</span><b>高架桥下</b><time>11 月 19 日 22:40</time></div><p>《雾港来信》大结局补完第三条线之后，整体完成度很高，但第 12—14 集中间有点拖，可以快进。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#7a5cff">徐</span><b>徐半页</b><time>11 月 18 日 14:08</time></div><p>《三十七楼的灯》四组租户里最喜欢二楼那对夫妻的段落，写得克制，没有刻意煽情。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#20b27a">朱</span><b>朱家小院</b><time>11 月 17 日 10:33</time></div><p>《雪线以北》的雪原长镜头很舒服，适合晚上安静看，但对白少确实需要一点耐心。</p></div>
+        <div class="comment"><div class="who"><span class="av" style="background:#ff5c39">胡</span><b>胡桃夹子</b><time>11 月 16 日 21:19</time></div><p>《星轨之外》第二季第 9 集的情感线收得不错，虽然整体节奏慢，但这一段值回票价。</p></div>
+      </div>
+    </section>
+
+    <!-- 9 相关资讯 -->
+    <section class="block" id="news">
+      <div class="block-hd">
+        <h2>相关资讯<small>条目上线、类型变化与规则调整</small></h2>
+      </div>
+      <div class="news">
+        <article class="news-item">
+          <div class="thumb"><img src="https://picsum.photos/seed/zixun-dongji12/600/400" width="600" height="400" alt="冬季档新剧定档排期表资讯配图" loading="lazy"></div>
+          <div><h4>冬季档 12 部新剧定档，悬疑题材占 5 部</h4><p>12 月上旬首播的 12 部剧集中，悬疑犯罪类占 5 部，家庭题材 3 部，排期表已按首播日期整理。</p><time>2026-11-15</time></div>
+        </article>
+        <article class="news-item">
+          <div class="thumb"><img src="https://picsum.photos/seed/zixun-shenhai13/600/400" width="600" height="400" alt="《深海之门》第 4 集上线资讯配图" loading="lazy"></div>
+          <div><h4>《深海之门》第 4 集上线，附 12 分钟摄制手记</h4><p>本集拍摄深度达 3800 米，手记内容涵盖载人潜水器的下潜流程与设备限制。</p><time>2026-11-25</time></div>
+        </article>
+        <article class="news-item">
+          <div class="thumb"><img src="https://picsum.photos/seed/zixun-duanju14/600/400" width="600" height="400" alt="短剧频道新增完结条目资讯配图" loading="lazy"></div>
+          <div><h4>短剧频道新增 14 部完结条目，全部标注结局状态</h4><p>新增条目单集 3—8 分钟，页面统一标注总集数与是否完结，方便按碎片时间筛选。</p><time>2026-11-18</time></div>
+        </article>
+        <article class="news-item">
+          <div class="thumb"><img src="https://picsum.photos/seed/zixun-wugang15/600/400" width="600" height="400" alt="《雾港来信》完结与时间轴对照表资讯配图" loading="lazy"></div>
+          <div><h4>《雾港来信》完结，官方放出分集时间轴对照表</h4><p>对照表按三条时间线分别列出关键事件，适合二刷时核对细节。</p><time>2026-11-24</time></div>
+        </article>
+        <article class="news-item">
+          <div class="thumb"><img src="https://picsum.photos/seed/zixun-shai16/600/400" width="600" height="400" alt="纪录片频道按集数筛选功能资讯配图" loading="lazy"></div>
+          <div><h4>纪录片频道上线按集数筛选，覆盖 386 部条目</h4><p>可按 6 集以内、10 集以上快速缩小范围，短篇纪录片检索效率明显提升。</p><time>2026-11-03</time></div>
+        </article>
+        <article class="news-item">
+          <div class="thumb"><img src="https://picsum.photos/seed/zixun-shanhai17/600/400" width="600" height="400" alt="《山海之间》直播场次安排资讯配图" loading="lazy"></div>
+          <div><h4>《山海之间》第 8 期今晚 21:10 直播，次日上线回看</h4><p>本期为闽南沿海采风专场，节目组提前放出了采集素材的片段。</p><time>2026-11-25</time></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- 10 相关推荐 -->
+    <section class="block" id="reco">
+      <div class="block-hd">
+        <h2>延伸方向<small>与今日片单不同的具体内容方向</small></h2>
+      </div>
+      <div class="reco">
+        <a href="/#cats">口述史纪录片</a>
+        <a href="/#cats">多线叙事悬疑</a>
+        <a href="/#cats">单集 8 分钟短剧</a>
+        <a href="/#cats">音乐采风综艺</a>
+        <a href="/#cats">季番作画分析</a>
+        <a href="/#cats">城市运动题材</a>
+        <a href="/#cats">节气美食慢综</a>
+        <a href="/#cats">声音记忆科幻</a>
+      </div>
+    </section>
+
+    <!-- 11 热门榜单 -->
+    <section class="block" id="rank">
+      <div class="block-hd">
+        <h2>本周热度榜<small>11 月 19 日—11 月 25 日讨论量排序</small></h2>
+      </div>
+      <div class="panel">
+        <div class="rank">
+          <div class="rank-item"><span class="no">1</span><div class="info"><b>雾港来信</b><span>悬疑 · 全 16 集完结</span></div><span class="heat">9.3</span></div>
+          <div class="rank-item"><span class="no">2</span><div class="info"><b>深海之门</b><span>纪录片 · 更新至 4 集</span></div><span class="heat">9.5</span></div>
+          <div class="rank-item"><span class="no">3</span><div class="info"><b>三十七楼的灯</b><span>短剧 · 全 24 集完结</span></div><span class="heat">9.1</span></div>
+          <div class="rank-item"><span class="no">4</span><div class="info"><b>星轨之外 第二季</b><span>动漫 · 更新至 9 集</span></div><span class="heat">8.9</span></div>
+          <div class="rank-item"><span class="no">5</span><div class="info"><b>旧城档案</b><span>纪录片 · 全 10 集完结</span></div><span class="heat">9.0</span></div>
+          <div class="rank-item"><span class="no">6</span><div class="info"><b>雪线以北</b><span>剧情片 · 全 12 集完结</span></div><span class="heat">8.8</span></div>
+          <div class="rank-item"><span class="no">7</span><div class="info"><b>山海之间</b><span>综艺 · 更新至 8 期</span></div><span class="heat">8.6</span></div>
+          <div class="rank-item"><span class="no">8</span><div class="info"><b>回声实验</b><span>剧情片 · 全 8 集完结</span></div><span class="heat">8.7</span></div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- 右栏 -->
+  <aside class="side-right" aria-label="辅助信息">
+    <div class="panel">
+      <div class="panel-hd">实时热榜</div>
+      <ul class="rank-mini">
+        <li><span class="n">1</span><span class="t">雾港来信 第 16 集</span></li>
+        <li><span class="n">2</span><span class="t">深海之门 第 4 集</span></li>
+        <li><span class="n">3</span><span class="t">三十七楼的灯 结局</span></li>
+        <li><span class="n">4</span><span class="t">星轨之外 第 9 集</span></li>
+        <li><span class="n">5</span><span class="t">旧城档案 第 10 集</span></li>
+        <li><span class="n">6</span><span class="t">山海之间 第 8 期</span></li>
+        <li><span class="n">7</span><span class="t">雪线以北 第 12 集</span></li>
+        <li><span class="n">8</span><span class="t">北纬三十度手记</span></li>
+      </ul>
+    </div>
+    <div class="panel">
+      <div class="panel-hd">更新节奏</div>
+      <div class="quick-links">
+        <a href="/#updates">每日 08:00 主更新</a>
+        <a href="/#updates">综艺晚间直播</a>
+        <a href="/#updates">动漫周更三集</a>
+        <a href="/#updates">短剧批量放出</a>
+        <a href="/#guide">完结状态标注</a>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-hd">类型速查</div>
+      <div class="quick-links">
+        <a href="/#cats">悬疑推理</a>
+        <a href="/#cats">自然地理</a>
+        <a href="/#cats">家庭治愈</a>
+        <a href="/#cats">运动竞技</a>
+        <a href="/#cats">音乐舞台</a>
+        <a href="/#cats">世界观设定</a>
+      </div>
+    </div>
+  </aside>
+
+</div>
+
+<!-- 页尾 -->
+<footer class="site-foot">
+  <div class="foot-wrap">
+    <div class="foot-top">
+      <div class="foot-brand">
+        <a class="brand" href="/#top">
+          <svg viewBox="0 0 48 48" aria-hidden="true">
+            <rect x="3" y="9" width="42" height="30" rx="7" fill="none" stroke="#ff5c39" stroke-width="3"/>
+            <path d="M20 18.5 L32 24 L20 29.5 Z" fill="#ff5c39"/>
+            <circle cx="38" cy="14" r="2.4" fill="#3aa0ff"/>
+          </svg>
+          <span class="name">91网版免费</span>
+        </a>
+        <p>整理免费高清影视资源的导航站，覆盖剧情片、纪录片、综艺、动漫、短剧五个方向，标注类型、更新进度与线路状态，帮助观众先判断再投入时间。</p>
+      </div>
+      <div class="foot-col">
+        <h4>内容频道</h4>
+        <ul>
+          <li><a href="/#cats">剧情片</a></li>
+          <li><a href="/#cats">纪录片</a></li>
+          <li><a href="/#cats">综艺</a></li>
+          <li><a href="/#cats">动漫</a></li>
+          <li><a href="/#cats">短剧</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>栏目入口</h4>
+        <ul>
+          <li><a href="/#picks">今日精选片单</a></li>
+          <li><a href="/#updates">最新更新动态</a></li>
+          <li><a href="/#deep">深度解析</a></li>
+          <li><a href="/#guide">观看路径</a></li>
+          <li><a href="/#faq">常见问题</a></li>
+        </ul>
+      </div>
+      <div class="foot-col">
+        <h4>社区与榜单</h4>
+        <ul>
+          <li><a href="/#rank">本周热度榜</a></li>
+          <li><a href="/#comments">观众评论</a></li>
+          <li><a href="/#news">相关资讯</a></li>
+          <li><a href="/#reco">延伸方向</a></li>
+          <li><a href="/#overview">平台概览</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <p class="disc">页面所列条目、评分、热度与更新时间为站内示例信息，用于内容展示与检索，具体可看状态以条目页标注为准。本站仅提供内容导航与信息整理。</p>
+      <p>© 2026 91网版免费 · 内容导航站</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var input = document.getElementById('searchInput');
+  var cards = Array.prototype.slice.call(document.querySelectorAll('#pickCards .card'));
+  var catBtns = Array.prototype.slice.call(document.querySelectorAll('#catList .cat'));
+  var resetBtn = document.getElementById('resetFilter');
+  var note = document.getElementById('filterNote');
+  var activeCat = null;
+
+  function applyFilter(){
+    var q = input ? input.value.trim().toLowerCase() : '';
+    var shown = 0;
+    cards.forEach(function(card){
+      var kw = (card.getAttribute('data-keywords') || '').toLowerCase();
+      var text = card.textContent.toLowerCase();
+      var matchQ = !q || kw.indexOf(q) > -1 || text.indexOf(q) > -1;
+      var matchCat = !activeCat || kw.indexOf(activeCat.toLowerCase()) > -1;
+      var ok = matchQ && matchCat;
+      card.style.display = ok ? '' : 'none';
+      if(ok) shown++;
+    });
+    if(note){
+      if((q || activeCat) && shown === 0){
+        note.textContent = '没有找到匹配的条目，试试「悬疑」「纪录片」「短剧」等类型词。';
+        note.classList.add('show');
+      } else if(activeCat){
+        note.textContent = '已筛选：' + activeCat + ' · 共 ' + shown + ' 部';
+        note.classList.add('show');
+      } else if(q){
+        note.textContent = '搜索「' + input.value.trim() + '」· 共 ' + shown + ' 部';
+        note.classList.add('show');
+      } else {
+        note.textContent = '';
+        note.classList.remove('show');
+      }
+    }
+  }
+
+  if(input){
+    input.addEventListener('input', applyFilter);
+  }
+
+  catBtns.forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var cat = btn.getAttribute('data-cat');
+      if(activeCat === cat){
+        activeCat = null;
+        btn.classList.remove('active');
+      } else {
+        activeCat = cat;
+        catBtns.forEach(function(b){ b.classList.remove('active'); });
+        btn.classList.add('active');
+      }
+      applyFilter();
+      var picks = document.getElementById('picks');
+      if(picks) picks.scrollIntoView({behavior:'smooth', block:'start'});
+    });
+  });
+
+  if(resetBtn){
+    resetBtn.addEventListener('click', function(){
+      activeCat = null;
+      catBtns.forEach(function(b){ b.classList.remove('active'); });
+      if(input) input.value = '';
+      applyFilter();
+    });
+  }
+})();
+</script>
+
+</body>
+          </html>
